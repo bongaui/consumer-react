@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import { BongaButton } from "@bongaui/react";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={logo} className="App-logo" alt="logo" />
+      <br />
+      <BongaButton color="primary">Primary</BongaButton>
+      <BongaButton color="secondary">Secondary</BongaButton>
+      <BongaButton color="tertiary">Tertiary</BongaButton>
+      <BongaButton>Default</BongaButton>
+
+      <h2>Block Width</h2>
+      <BongaButton color="primary" expand="block">
+        A block button
+      </BongaButton>
+
+      <h2>Full Width</h2>
+      <BongaButton color="secondary" expand="full">
+        A full-width button
+      </BongaButton>
     </div>
   );
 }
